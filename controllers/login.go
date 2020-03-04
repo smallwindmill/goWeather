@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"mindplus_statistic/models"
+	"mindplus_weather/models"
 	"github.com/astaxie/beego"
 )
 

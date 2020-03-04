@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"time"
-	"mindplus_statistic/models"
+	"mindplus_weather/models"
 	"github.com/astaxie/beego"
 )
 
@@ -16,7 +16,7 @@ func (c *AddFeedBackController) Post() {
 	feedBackMsg := c.Input().Get("feedBackMsg")
 	email := c.Input().Get("email")
 	path := c.Input().Get("path")
-	
+
 	createdTime := time.Now()
 
 	if v := c.Input().Get("Created"); v != ""{

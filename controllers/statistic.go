@@ -3,7 +3,7 @@ package controllers
 import (
 	"time"
 	"strconv"
-	"mindplus_statistic/models"
+	"mindplus_weather/models"
 	"github.com/astaxie/beego"
 )
 
