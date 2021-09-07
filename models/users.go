@@ -62,14 +62,6 @@ func GetFeedBacks(createdStartTime time.Time, createdEndTime time.Time, offset i
 
 func init() {
 	return
-	// db, err = gorm.Open("mysql", "root:123456.@/statistic?charset=utf8mb4&parseTime=True&loc=Local")
-	db, err = gorm.Open("mysql", "root:hidfrobot@/statistic?charset=utf8mb4&parseTime=True&loc=Local")
-	db.Debug().AutoMigrate(&User{},&FeedBack{})
-	db.Debug().AutoMigrate(&CollectLibrary{},&CollectSetting{},&CollectJumpOuter{},
-		&CollectScreen{},&CollectCodeLanguage{}, &CollectCodeMode{},&CollectProduct{},&CollectModule{},&CollectPageview{})
-	fmt.Println(db)
-	//db.Debug().Model(&City{}).AddForeignKey("city_id", "users(id)", "CASCADE", "CASCADE")
-
 }
 
 func AddUser(mac string , city string , ip string, version string,startuptime int,createdTime time.Time, updatedTime time.Time){

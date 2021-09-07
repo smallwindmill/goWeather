@@ -59,26 +59,10 @@ func GetCachedData (key string) (string){
 // func SetCachedData (key1, value string) (map[string]interface{}){
 func SetCachedData (key , value string){
 		fmt.Println("set cached data===============")
-		// fmt.Println("set data1=====", value)
-		/*var token_arr map[string]interface{}
-		// 读取参数
-
-  	secret_key1 := key1
-		secret_key2 := key2
-	  if(key1 == ""){
-	  	secret_key1 = GetConfig("secret_key1")
-			secret_key2 = GetConfig("secret_key2")
-	  }
-
-		if(key1 == "" && key2 == ""){
-			cached_datas = token_arr
-		}
-		// refresh_token
-		return token_arr*/
-		fmt.Println("MapToJson(cached_datas)===", MapToJson(cached_datas))
-		convert_str,_ := strconv.Unquote(value)
+		// fmt.Println("MapToJson(cached_datas)===", MapToJson(cached_datas))
+		//convert_str,_ := strconv.Unquote(value)
 		cached_datas[key] = value
-		fmt.Println("fromUnicodeToZn(value)===", convert_str)
+		// fmt.Println("fromUnicodeToZn(value)===", convert_str)
 		WriteFile("./.cached.json", MapToJson(cached_datas))
 		// fmt.Println("cached_datas=====", cached_datas)
 }
